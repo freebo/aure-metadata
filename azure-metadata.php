@@ -34,6 +34,7 @@ $client_ip = $_SERVER['REMOTE_ADDR'];
 $client_agent = $_SERVER['HTTP_USER_AGENT'];
 $page_title =  'Azure - ' . $server_name;
 $php_self = $_SERVER['SCRIPT_NAME'];
+$git_url = 'https://github.com/freebo/aure-metadata';
 
 
 /** Check for page refresh, defaults to 5 mins **/
