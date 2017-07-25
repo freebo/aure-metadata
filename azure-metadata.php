@@ -18,6 +18,15 @@ $metad = json_decode($json_meta, true);
 
 
 $load = sys_getloadavg();
+
+//Get the system uptime
+$str   = @file_get_contents('/proc/uptime');
+$num   = floatval($str);
+$secs  = $num %60; $num = intdiv($num, 60);
+$mins  = $num % 60;      $num = intdiv($num, 60);
+$hours = $num % 24;      $num = intdiv($num, 24);
+$days  = $num;
+
 $server_name = $_SERVER['SERVER_NAME'];
 $server_ip = $metad['network']['interface'][0]['ipv4']['ipAddress'][0]['publicIpAddress'];
 $server_software = $_SERVER['SERVER_SOFTWARE'];
@@ -124,6 +133,14 @@ if (empty($_GET['refresh'])) {
 
                     echo '<td nowrap><span class="key">'. "Private IP" . '</span></td>';
 			            echo '<td no wrap><span class="value">'. $metad['network']['interface'][0]['ipv4']['ipAddress'][0]['privateIpAddress'] . '</span></td>';
+			        echo '</tr>';
+
+					echo '<td nowrap><span class="key">'. "Load Average" . '</span></td>';
+			            echo '<td no wrap><span class="value">'. $load[0] . " " . $load[1] . " " . $load[2] . '</span></td>';
+			        echo '</tr>';
+
+					echo '<td nowrap><span class="key">'. "Uptime " . '</span></td>';
+						echo '<td no wrap><span class="value">'. $days . ":" . $hours . ":" . $mins . ":" . $secs . '</span></td>';
 			        echo '</tr>';
 
 			    echo '</table>';
