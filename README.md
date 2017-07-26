@@ -1,4 +1,4 @@
-# aure-metadata
+# azure-metadata
 apt-get install git apache2 php7.0 libapache2-mod-php7.0 stress
 
 
