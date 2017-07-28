@@ -6,7 +6,7 @@ ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 // Credit
 $author_name = 'Mike Freeman';
-$author_version = 'v1.0';
+$author_version = 'v0.90';
 $author_email = 'freeman.mj@gmail.com';
 $author_project = 'Azure Metadata PHP Page';
 
@@ -157,7 +157,7 @@ if (empty($_GET['refresh'])) {
 			<a href="<?php echo $git_url; ?>/blob/master/LICENSE">License</a>
 		</div>
 		<div id="copyleft">Copyleft &copy; <a href="<?php echo $git_url; ?>"><?php echo $author_project.' '.$author_version;?></a><br />
-			Powered by <a href="http://www.php.net/">PHP5</a> and <a href="mailto:<?php echo $author_email;?>?subject=<?php echo $author_project;?>"><?php echo $author_name; ?></a>
+			Powered by <a href="http://www.php.net/">PHP5</a> and <a href="mailto:<?php echo $author_email;?>?subject=<?php echo $author_project;?>"><?php echo $author_name; ?>/a>
 		</div>
 	</div> <!-- End Footer -->
 
