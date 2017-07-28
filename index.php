@@ -72,6 +72,15 @@ if (empty($_GET['refresh'])) {
 		<div id="logo">
 			<h1>Microsoft Azure</h1>
 		</div>
+		<div id="button">
+			<div class="onoffswitch">
+    			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+    				<label class="onoffswitch-label" for="myonoffswitch">
+        			<span class="onoffswitch-inner"></span>
+        			<span class="onoffswitch-switch"></span>
+    				</label>
+			</div>
+		</div>
 	</div>
 	<div id="main-nav">
 		<div id="links">
@@ -147,15 +156,7 @@ if (empty($_GET['refresh'])) {
 			    echo '</table>';
 		    	?>
 		</div>
-		<div id="button">
-		<div class="onoffswitch">
-    		<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
-    		<label class="onoffswitch-label" for="myonoffswitch">
-        		<span class="onoffswitch-inner"></span>
-        		<span class="onoffswitch-switch"></span>
-    	</label>
-		</div>
-	</div>
+
 	</div> <!-- End Content -->
 
 
