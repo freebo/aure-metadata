@@ -136,7 +136,7 @@ if (empty($_GET['refresh'])) {
 			            echo '<td no wrap><span class="value">'. $metad['network']['interface'][0]['ipv4']['ipAddress'][0]['privateIpAddress'] . '</span></td>';
 			        echo '</tr>';
 
-					echo '<td nowrap><span class="key">'. "Load Average (1-5-15 min)" . '</span></td>';
+					echo '<td nowrap><span class="key">'. "Load Average (1 5 15 min)" . '</span></td>';
 			            echo '<td no wrap><span class="value">'. $load[0] . " " . $load[1] . " " . $load[2] . '</span></td>';
 			        echo '</tr>';
 
