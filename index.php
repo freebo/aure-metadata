@@ -147,9 +147,7 @@ if (empty($_GET['refresh'])) {
 			    echo '</table>';
 		    	?>
 		</div>
-	</div> <!-- End Content -->
-
-	<div id="button">
+		<div id="button">
 		<div class="onoffswitch">
     		<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
     		<label class="onoffswitch-label" for="myonoffswitch">
@@ -158,6 +156,9 @@ if (empty($_GET['refresh'])) {
     	</label>
 		</div>
 	</div>
+	</div> <!-- End Content -->
+
+
 	
 	<div id="footer">
 		<div id="altnav">
