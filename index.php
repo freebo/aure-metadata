@@ -1,5 +1,5 @@
 <?php
-// Based on alphamusk's AWS metadata page ht
+// Based on alphamusk's AWS metadata page htip
 // Enable better php debugging
 ini_set('display_errors', 'On');
 //error_reporting(E_ALL | E_STRICT);
