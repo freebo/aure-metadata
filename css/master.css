@@ -1,4 +1,4 @@
-Orange: #ff9900
+Ovalrange: #ff9900
 Blue: #3399ff
 */
 
@@ -30,7 +30,7 @@ border-bottom: 1px solid #3333ff;
 
 /* Main Navigation */
 
-#main-nav { height: 30px; background-color: #555; border-bottom: 1px solid #3333ff;}
+#main-nav { height: 30px; background-color: #3333ff; border-bottom: 1px solid #3333ff;}
 
 #main-nav ul { margin: 0px; padding: 0px;} 
 
@@ -170,7 +170,7 @@ color: #3333ff;
 }
 
 #content .value {
-color: #cc0000;
+color: #3399ff;
 }
 
 #footer {
