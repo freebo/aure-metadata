@@ -77,7 +77,7 @@ if (empty($_GET['refresh'])) {
 		<div id="links">
 			<ul>
 				<li><span>Refresh</span></li>
-				<li><a href="<?php echo $php_self.'?refresh=2'; ?>">2s</a></li>
+				<li><a href="<?php echo $php_self.'?refresh=3'; ?>">3s</a></li>
 				<li><a href="<?php echo $php_self.'?refresh=5'; ?>">5s</a></li>
 				<li><a href="<?php echo $php_self.'?refresh=30'; ?>">30s</a></li>
 				<li><a href="<?php echo $php_self.'?refresh=60'; ?>">1m</a></li>
