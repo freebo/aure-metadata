@@ -1,15 +1,25 @@
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<html>
+<head>
+<title>Button Writer</title>
+<script type='text/javascript' src='//code.jquery.com/jquery-1.10.1.js'></script>
+</head>
 
-
-<button type="button" onclick="foo()">Click Me</button>
-
-
- function foo () {
-      $.ajax({
-        url:"hello.php", //the page containing php script
-        type: "POST", //request type
-        success:function(result){
-         alert(result);
-       }
-     });
+<body>
+<button id="button1" type="button">Write to File</button>
+</body>
+<script type='text/javascript'>
+$('#button1').click(function(){
+ $.ajax({
+ type: "POST",
+ url: "abc.php",
+ data: "",
+ success: function(msg){
+     alert(msg);
+ },
+ error: function(XMLHttpRequest, textStatus, errorThrown) {
+    alert("Some error occured");
  }
+ });
+});
+</script>
+</html>
