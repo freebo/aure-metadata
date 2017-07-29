@@ -87,15 +87,6 @@ if (empty($_GET['refresh'])) {
 	</div>
 	<div id="sidebar-a">
 		<div class="padding">
-			<div id="button">
-				<div class="onoffswitch">
-    				<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
-    					<label class="onoffswitch-label" for="myonoffswitch">
-        				<span class="onoffswitch-inner"></span>
-        				<span class="onoffswitch-switch"></span>
-    					</label>
-				</div>
-			</div>
 			<h2>Azure - Region</h2>
 			<h4><p><?php echo strtoupper($metad['compute']['location']); ?></p><br></h4>
 			<h3>Fault Domain</h3>
@@ -105,6 +96,15 @@ if (empty($_GET['refresh'])) {
 			<h3>Information</h3>
 			<p>Server: <?php echo $server_software.'<br>Public IP: ';?><a href="http://<?php echo $server_ip; ?>"><?php echo $server_ip; ?></a></p>
 			<p>Client: <?php echo $client_agent.'<br>IP: '.$client_ip; ?></p>
+			<div id="button">
+				<div class="onoffswitch">
+    				<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+    					<label class="onoffswitch-label" for="myonoffswitch">
+        				<span class="onoffswitch-inner"></span>
+        				<span class="onoffswitch-switch"></span>
+    					</label>
+				</div>
+			</div>
 		</div>
 	</div> <!-- End sidebar-a -->
 	
