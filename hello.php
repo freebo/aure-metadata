@@ -1,5 +1,5 @@
 <?PHP
     echo 'I just ran a php function';
-    shell_exec('touch /tmp/stress');
-    
+    exec('touch /tmp/stress');
+    ecec('whoami')
 ?>
