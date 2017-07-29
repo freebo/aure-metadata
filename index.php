@@ -109,7 +109,7 @@ function togglestress () {
 			<p>Client: <?php echo $client_agent.'<br>IP: '.$client_ip; ?></p>
 			<div id="button">
 				<div class="onoffswitch">
-    				<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="togglestress()">
+    				<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onchange="togglestress()">
     					<label class="onoffswitch-label" for="myonoffswitch">
         				<span class="onoffswitch-inner"></span>
         				<span class="onoffswitch-switch"></span>
