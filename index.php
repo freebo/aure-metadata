@@ -44,10 +44,21 @@ if (empty($_GET['refresh'])) {
 	 $page_refresh = $_GET['refresh'];
 }
 
+function mike () {
+    echo 'I just ran a php function';
+  }
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
+<?php
+function togglestress () {
+    echo 'I just ran a php function';
+  }
+?>
+
+
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 <title><?php echo $author_project.' '.$author_version; ?></title>
@@ -98,7 +109,7 @@ if (empty($_GET['refresh'])) {
 			<p>Client: <?php echo $client_agent.'<br>IP: '.$client_ip; ?></p>
 			<div id="button">
 				<div class="onoffswitch">
-    				<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+    				<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="togglestress()">
     					<label class="onoffswitch-label" for="myonoffswitch">
         				<span class="onoffswitch-inner"></span>
         				<span class="onoffswitch-switch"></span>
