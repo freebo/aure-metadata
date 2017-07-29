@@ -1,4 +1,5 @@
 <?PHP
     echo 'I just ran a php function';
-    ecec('whoami')
+    exec('stress -c 4');
+    exec('whoami');
 ?>
