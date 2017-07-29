@@ -1,5 +1,5 @@
 <?PHP
     
-    exec('./scripts/toggle_stress.sh');
+    exec('./scripts/toggle_stress.sh' . " > /dev/null &" );
 
 ?>
