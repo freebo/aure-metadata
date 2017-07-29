@@ -48,9 +48,7 @@ function stress () {
 	shell_exec('touch /tmp/stress');
 }
 
-if (isset($_POST['onoffswitch'])) {
-	shell_exec('touch /tmp/stress2');
-	}
+
 
 ?>
 
@@ -169,7 +167,12 @@ if (isset($_POST['onoffswitch'])) {
 
 	</div> <!-- End Content -->
 
+<?php
 
+if (isset($_POST['onoffswitch'])) {
+	shell_exec('touch /tmp/stress2');
+	}
+?>
 	
 	<div id="footer">
 		<div id="altnav">
