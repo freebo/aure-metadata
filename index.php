@@ -48,6 +48,10 @@ function stress () {
 	shell_exec('touch /tmp/stress');
 }
 
+if (isset($_POST['onoffswitch'])) {
+	shell_exec('touch /tmp/stress2');
+	}
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
