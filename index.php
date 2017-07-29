@@ -71,15 +71,6 @@ if (empty($_GET['refresh'])) {
 	<div id="header">
 		<div id="logo">
 			<h1>Microsoft Azure</h1>		
-			<div id="button">
-				<div class="onoffswitch">
-    				<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
-    					<label class="onoffswitch-label" for="myonoffswitch">
-        				<span class="onoffswitch-inner"></span>
-        				<span class="onoffswitch-switch"></span>
-    					</label>
-				</div>
-			</div>
 		</div>
 	</div>
 	<div id="main-nav">
@@ -96,6 +87,15 @@ if (empty($_GET['refresh'])) {
 	</div>
 	<div id="sidebar-a">
 		<div class="padding">
+			<div id="button">
+				<div class="onoffswitch">
+    				<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+    					<label class="onoffswitch-label" for="myonoffswitch">
+        				<span class="onoffswitch-inner"></span>
+        				<span class="onoffswitch-switch"></span>
+    					</label>
+				</div>
+			</div>
 			<h2>Azure - Region</h2>
 			<h4><p><?php echo strtoupper($metad['compute']['location']); ?></p><br></h4>
 			<h3>Fault Domain</h3>
