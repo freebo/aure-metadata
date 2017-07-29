@@ -16,11 +16,11 @@ $meta_host = '169.254.169.254';
 
 
 if(isset($_POST["onoffswitch"])){
-   file_put_contents('file.txt', '1');
+   file_put_contents('/tmp/file.txt', '1');
    echo exec('whoami');
 }
 else{
-   file_put_contents('file.txt', '0');
+   file_put_contents('/tmp/file.txt', '0');
    echo exec('date');
 }
 
