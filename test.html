@@ -1,18 +1,15 @@
-<button type="button">Click Me</button>
-<p></p>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $("button").click(function(){
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-            $.ajax({
-                type: 'POST',
-                url: 'hello.php',
-                success: function(data) {
-                    alert(data);
-                    $("p").text(data);
 
-                }
-            });
-   });
-});
-</script>
+<button type="button" onclick="foo()">Click Me</button>
+
+
+ function foo () {
+      $.ajax({
+        url:"hello.php", //the page containing php script
+        type: "POST", //request type
+        success:function(result){
+         alert(result);
+       }
+     });
+ }
