@@ -228,7 +228,7 @@ color: #3399ff;
 .onoffswitch-inner:before {
     content: "Stress";
     padding-left: 10px;
-    background-color: #F20000; color: #3399ff;
+    background-color: #F20000; color: #EEEEEE;
 }
 .onoffswitch-inner:after {
     content: "Relax";
