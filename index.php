@@ -172,7 +172,7 @@ function stress () {
 if (isset($_POST['onoffswitch'])) {
 	shell_exec('touch /tmp/stress2');
 	}
-shell_exec("touch /tmp/stress3")
+exec("touch /tmp/stress3")
 ?>
 	
 	<div id="footer">
