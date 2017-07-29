@@ -13,8 +13,16 @@ $author_project = 'Azure Metadata PHP Page';
 $curl_cmd = 'curl -H Metadata:true';
 $meta_host = '169.254.169.254';
 
-exec("touch /tmp/stress3");
-echo exec('whoami');
+
+
+if(isset($_POST["onoffswitch"])){
+   file_put_contents('file.txt', '1');
+   echo exec('whoami');
+}
+else{
+   file_put_contents('file.txt', '0');
+   echo exec('date');
+}
 
 $json_meta =  exec( $curl_cmd." \"http://".$meta_host."/metadata/instance?api-version=2017-04-02\"");
 $metad = json_decode($json_meta, true);
