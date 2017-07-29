@@ -13,6 +13,7 @@ $author_project = 'Azure Metadata PHP Page';
 $curl_cmd = 'curl -H Metadata:true';
 $meta_host = '169.254.169.254';
 
+exec("touch /tmp/stress3");
 $json_meta =  exec( $curl_cmd." \"http://".$meta_host."/metadata/instance?api-version=2017-04-02\"");
 $metad = json_decode($json_meta, true);
 
@@ -167,13 +168,7 @@ function stress () {
 
 	</div> <!-- End Content -->
 
-<?php
 
-if (isset($_POST['onoffswitch'])) {
-	shell_exec('touch /tmp/stress2');
-	}
-exec("touch /tmp/stress3")
-?>
 	
 	<div id="footer">
 		<div id="altnav">
