@@ -2,11 +2,10 @@
     <style type="text/css" media="all">@import "css/master.css";</style>
 <head>
 <title>Button Writer</title>
-<script type='text/javascript' src='//code.jquery.com/jquery-1.10.1.js'></script>
+
 </head>
 
 <body>
-<button id="button1" type="button">Write to File</button>
 <div class="onoffswitch">
     				<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="togglestress();">
     					<label class="onoffswitch-label" for="myonoffswitch">
@@ -21,12 +20,6 @@ $('#myonoffswitch').click(function(){
  type: "POST",
  url: "hello.php",
  data: ""
- //success: function(msg){
-     //alert(msg);
- //},
- //error: function(XMLHttpRequest, textStatus, errorThrown) {
-    //alert("Some errors have occured");
- //}
 
  });
 }); 
