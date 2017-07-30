@@ -20,13 +20,14 @@ $('#myonoffswitch').click(function(){
  $.ajax({
  type: "POST",
  url: "hello.php",
- data: "",
- success: function(msg){
-     alert(msg);
- },
- error: function(XMLHttpRequest, textStatus, errorThrown) {
-    alert("Some errors have occured");
- }
+ data: ""
+ //success: function(msg){
+     //alert(msg);
+ //},
+ //error: function(XMLHttpRequest, textStatus, errorThrown) {
+    //alert("Some errors have occured");
+ //}
+
  });
 }); 
 </script>
