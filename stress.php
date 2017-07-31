@@ -1,5 +1,5 @@
 <?PHP
     
-    exec('./scripts/toggle_stress.sh' , $output, $return_var );
+    exec('stress -c 16' , $output, $return_var );
 
 ?>
