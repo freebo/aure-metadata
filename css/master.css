@@ -226,7 +226,7 @@ color: #3399ff;
     box-sizing: border-box;
 }
 .onoffswitch-inner:before {
-    content: "Stress";
+    content: "Relax";
     padding-left: 10px;
     background-color: #F20000; color: #EEEEEE;
 }
