@@ -44,6 +44,14 @@ if (empty($_GET['refresh'])) {
    } else {
 	 $page_refresh = $_GET['refresh'];
 }
+/** See if stress is running to set the toggle switch **/
+exec("pgrep stress", $output, $return);
+if ($return == 0) {
+	$stressed = "yes";
+}
+else {
+	$stressed = "no";
+}
 
 
 
@@ -104,7 +112,8 @@ if (empty($_GET['refresh'])) {
 			<p>Client: <?php echo $client_agent.'<br>IP: '.$client_ip; ?></p>
 			<div id="button">
 				<div class="onoffswitch">
-    				<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="togglestress();">
+					<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch";" 
+						<?php if($stressed == 'yes') echo 'checked="checked"';?> >
     					<label class="onoffswitch-label" for="myonoffswitch">
         				<span class="onoffswitch-inner"></span>
         				<span class="onoffswitch-switch"></span>
@@ -182,5 +191,15 @@ if (empty($_GET['refresh'])) {
 
 </div> <!-- End Page Container -->
 </body>
+<!-- Script to post to a script which invokes stress process if toggle clicked -->
+<script type='text/javascript'>
+$('#myonoffswitch').click(function(){
+ $.ajax({
+ type: "POST",
+ url: "stress.php",
+ data: ""
 
+ });
+}); 
+</script>
 </html>
