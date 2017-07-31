@@ -1,0 +1,68 @@
+{
+    "id": "/subscriptions/f32027f3-4939-4286-8da7-6aa9a8cd5258/resourceGroups/vmssDemoRg/providers/microsoft.insights/autoscalesettings/salceInOut50",
+    "name": "salceInOut50",
+    "type": "Microsoft.Insights/autoscaleSettings",
+    "location": "southeastasia",
+    "tags": {
+        "$type": "Microsoft.WindowsAzure.Management.Common.Storage.CasePreservedDictionary, Microsoft.WindowsAzure.Management.Common.Storage"
+    },
+    "properties": {
+        "profiles": [
+            {
+                "name": "Auto created scale condition",
+                "capacity": {
+                    "minimum": "2",
+                    "maximum": "8",
+                    "default": "2"
+                },
+                "rules": [
+                    {
+                        "metricTrigger": {
+                            "metricName": "Percentage CPU",
+                            "metricNamespace": "",
+                            "metricResourceUri": "/subscriptions/f32027f3-4939-4286-8da7-6aa9a8cd5258/resourceGroups/vmssDemoRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmssDemo",
+                            "metricResourceLocation": "southeastasia",
+                            "timeGrain": "PT1M",
+                            "statistic": "Average",
+                            "timeWindow": "PT5M",
+                            "timeAggregation": "Average",
+                            "operator": "GreaterThan",
+                            "threshold": 50
+                        },
+                        "scaleAction": {
+                            "direction": "Increase",
+                            "type": "ChangeCount",
+                            "value": "1",
+                            "cooldown": "PT5M"
+                        }
+                    },
+                    {
+                        "metricTrigger": {
+                            "metricName": "Percentage CPU",
+                            "metricNamespace": "",
+                            "metricResourceUri": "/subscriptions/f32027f3-4939-4286-8da7-6aa9a8cd5258/resourceGroups/vmssDemoRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmssDemo",
+                            "metricResourceLocation": "southeastasia",
+                            "timeGrain": "PT1M",
+                            "statistic": "Average",
+                            "timeWindow": "PT5M",
+                            "timeAggregation": "Average",
+                            "operator": "LessThan",
+                            "threshold": 10
+                        },
+                        "scaleAction": {
+                            "direction": "Decrease",
+                            "type": "ChangeCount",
+                            "value": "1",
+                            "cooldown": "PT5M"
+                        }
+                    }
+                ]
+            }
+        ],
+        "enabled": true,
+        "name": "salceInOut50",
+        "targetResourceUri": "/subscriptions/f32027f3-4939-4286-8da7-6aa9a8cd5258/resourceGroups/vmssDemoRg/providers/Microsoft.Compute/virtualMachineScaleSets/vmssDemo",
+        "targetResourceLocation": "southeastasia",
+        "notifications": []
+    }
+}
