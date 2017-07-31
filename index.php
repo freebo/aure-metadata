@@ -44,10 +44,7 @@ if (empty($_GET['refresh'])) {
    } else {
 	 $page_refresh = $_GET['refresh'];
 }
-function stress () {
-    echo 'I just ran a php function';
-	shell_exec('touch /tmp/stress');
-}
+
 
 
 
