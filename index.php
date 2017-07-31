@@ -60,7 +60,7 @@ else {
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-
+<script type='text/javascript' src='//code.jquery.com/jquery-1.10.1.js'></script>
 
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
@@ -113,7 +113,7 @@ else {
 			<div id="button">
 				<div class="onoffswitch">
 					<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch";" 
-						<?php if($stressed == 'yes') echo 'checked="checked"';?> >
+							<?php if($stressed == 'yes') echo 'checked="checked"';?> >
     					<label class="onoffswitch-label" for="myonoffswitch">
         				<span class="onoffswitch-inner"></span>
         				<span class="onoffswitch-switch"></span>
