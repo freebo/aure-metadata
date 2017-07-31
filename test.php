@@ -1,5 +1,5 @@
 <?php
-$stressed = "yes"
+$stressed = "no"
 
 ?>
 
