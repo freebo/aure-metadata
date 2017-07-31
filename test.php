@@ -1,5 +1,11 @@
 <?php
-$stressed = "no"
+exec("pgrep stress", $output, $return);
+if ($return == 0) {
+	$stressed = "yes";
+}
+else {
+	$stressed = "no";
+}
 
 ?>
 
