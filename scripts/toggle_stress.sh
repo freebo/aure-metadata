@@ -3,5 +3,5 @@
 if  pgrep stress ; then
 	pkill stress ;
 	else
-		stress -c 1&
+		stress -c 14&
        	fi
