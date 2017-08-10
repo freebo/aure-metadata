@@ -19,10 +19,7 @@ az group create --name $RG --location southeastasia
 
 #Then the Scale set (also creates the LB)
 
-az vmss create -n $NAME -g $RG --vm-sku Standard_F1s \
---public-ip-address-dns-name `echo ${NAME}ip | tr '[:upper:]' '[:lower:]'` \
---image /subscriptions/f32027f3-4939-4286-8da7-6aa9a8cd5258/resourceGroups/images-rg/providers/Microsoft.Compute/images/Metadata-ub16v092 \
---public-ip-per-vm --vm-domain-name `echo ${NAME}vm | tr '[:upper:]' '[:lower:]'`
+az vmss create -n $NAME -g $RG --vm-sku Standard_F1s --public-ip-address-dns-name `echo ${NAME}ip | tr '[:upper:]' '[:lower:]'` --image /subscriptions/f32027f3-4939-4286-8da7-6aa9a8cd5258/resourceGroups/images-rg/providers/Microsoft.Compute/images/Metadata-ub16v092 --public-ip-per-vm --vm-domain-name `echo ${NAME}vm | tr '[:upper:]' '[:lower:]'`
 
 #Enable Autoscale and Scaling rules on the vmss (only by console or ARM Template, see autoscale.json)
 
