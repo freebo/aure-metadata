@@ -17,19 +17,22 @@ NAME=vmssDemo1
 
 az group create --name $RG --location southeastasia
 
-#Then the Scale set (also creates the LB named vmssnameLB)
+#Then the Scale set (also creates the LB)
 
-az vmss create -n $NAME -g $RG --vm-sku Standard_F1s --public-ip-address-dns-name ${NAME}ip --image /subscriptions/f32027f3-4939-4286-8da7-6aa9a8cd5258/resourceGroups/images-rg/providers/Microsoft.Compute/images/Metadata-ub16v092 --public-ip-per-vm --vm-domain-name ${NAME}vm
+az vmss create -n $NAME -g $RG --vm-sku Standard_F1s \
+--public-ip-address-dns-name `echo ${NAME}ip | tr '[:upper:]' '[:lower:]'` \
+--image /subscriptions/f32027f3-4939-4286-8da7-6aa9a8cd5258/resourceGroups/images-rg/providers/Microsoft.Compute/images/Metadata-ub16v092 \
+--public-ip-per-vm --vm-domain-name `echo ${NAME}vm | tr '[:upper:]' '[:lower:]'`
 
 #Enable Autoscale and Scaling rules on the vmss (only by console or ARM Template, see autoscale.json)
 
 #Then the health probe
 
-az network lb probe create -g $RG --lb-name ${NAME}lb -n vmssDemoProbe --protocol Http --port 80 --path /
+az network lb probe create -g $RG --lb-name ${NAME}lb -n ${NAME}probe --protocol Http --port 80 --path /
 
 #Then the LB rule
 
-az network lb rule create -g $RG --lb-name ${NAME}lb -n ${NAME}rule --protocol Tcp --frontend-port 80 --backend-port 80 --frontend-ip-name loadBalancerFrontEnd --backend-pool-name ${NAME}pool
+az network lb rule create -g $RG --lb-name ${NAME}lb -n ${NAME}rule --protocol Tcp --frontend-port 80 --backend-port 80 --frontend-ip-name loadBalancerFrontEnd --backend-pool-name ${NAME}LBBEPool
 
 #show the puiblic ip of the LB 
 az network lb frontend-ip show -g $RG --lb-name ${NAME}lb
