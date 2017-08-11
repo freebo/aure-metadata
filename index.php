@@ -6,16 +6,14 @@ ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 // Credit
 $author_name = 'Mike Freeman';
-$author_version = 'v0.92c';
+$author_version = 'v0.92d';
 $author_email = 'freeman.mj@gmail.com';
 $author_project = 'Azure Metadata PHP Page';
 
+
 $curl_cmd = 'curl -H Metadata:true';
 $meta_host = '169.254.169.254';
-
-
-//$json_meta =  exec( $curl_cmd." \"http://".$meta_host."/metadata/instance?api-version=2017-04-02\"");
-$json_meta =  file_get_contents( "http://".$meta_host."/metadata/instance?api-version=2017-04-02\");
+$json_meta =  exec( $curl_cmd." \"http://".$meta_host."/metadata/instance?api-version=2017-04-02\"");
 $metad = json_decode($json_meta, true);
 
 

@@ -10,7 +10,7 @@ cronjob="*/2 * * * * cd /var/www/html && git pull https://github.com/freebo/azur
 
 
 *To create the demo vmss from image...
-# First the RG
+# First the Resource group
 
 RG=vmssDemo1Rg
 NAME=vmssDemo1
