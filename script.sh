@@ -9,4 +9,3 @@ cronjob="*/2 * * * * cd /var/www/html && git pull https://github.com/freebo/azur
 crontab -l | { cat; echo "*/2 * * * * cd /var/www/html/azure-metadata && git pull https://github.com/freebo/azure-metadata.git"; } |crontab -
 
 
-https://github.com/freebo/azure-metadata.git
