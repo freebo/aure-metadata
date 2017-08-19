@@ -33,3 +33,9 @@ az network lb rule create -g $RG --lb-name ${NAME}lb -n ${NAME}rule --protocol T
 
 #show the puiblic ip of the LB 
 az network lb frontend-ip show -g $RG --lb-name ${NAME}lb
+
+#Add extension
+
+az vm extension set --publisher Microsoft.Azure.Extensions  \
+       --version 2.0 --name CustomScript --vm-name scratch4-vm -g scratch2-rg  \
+       --settings '{"fileUris":["https://raw.githubusercontent.com/freebo/azure-metadata/master/test.sh"],"commandToExecute":"sh test.sh"}'
