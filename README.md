@@ -36,6 +36,6 @@ az network lb frontend-ip show -g $RG --lb-name ${NAME}lb
 
 #Add extension
 
-az vm extension set --publisher Microsoft.Azure.Extensions  \
-       --version 2.0 --name CustomScript --vm-name scratch4-vm -g scratch2-rg  \
+az vmss extension set --publisher Microsoft.Azure.Extensions  \
+       --version 2.0 --name CustomScript --vmss-name vmssDemo -vm -g vmssDemo-rg  \
        --settings '{"fileUris":["https://raw.githubusercontent.com/freebo/azure-metadata/master/test.sh"],"commandToExecute":"sh test.sh"}'
