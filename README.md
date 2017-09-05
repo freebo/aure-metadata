@@ -1,6 +1,8 @@
 # azure-metadata, Inspired by alphamusk's AWS metatdata page
 
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+#Screenshot
+
+![alt text](https://raw.githubusercontent.com/freebo/azure-metadata/raw/master/azmeta.PNG)
 
 #To create vm image (ubuntu)
 apt-get install -y git apache2 php7.0 libapache2-mod-php7.0 stress
