@@ -2,7 +2,7 @@
 
 #Screenshot
 
-![alt text](https://raw.githubusercontent.com/freebo/azure-metadata/raw/master/azmeta.PNG)
+![Screenshot](https://github.com/freebo/azure-metadata/blob/master/azmeta.PNG)
 
 #To create vm image (ubuntu)
 apt-get install -y git apache2 php7.0 libapache2-mod-php7.0 stress
