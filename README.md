@@ -7,4 +7,4 @@
 Build using script in build_cli.sh
 
 
-TODO: Automate Scaling, at this stage its neccessary to turn on scaling using ARM,PS or the Portal as setting up scaling doesn't seem to be available in the CLI
+TODO: Automate Scaling, at this stage its neccessary to turn on scaling using ARM,PS or the Portal as setting up scaling doesn't seem to be available in the CLI.
