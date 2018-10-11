@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: az-meta-deployment
+  labels:
+    app: az-meta
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: az-meta
+  template:
+    metadata:
+      labels:
+        app: az-meta
+    spec:
+      containers:
+      - name: az-meta
+        image: freebo/az-metadata:v0.1
+        ports:
+        - containerPort: 80
