@@ -11,3 +11,4 @@ spec:
   selector:
     run: az-meta
   type: LoadBalancer
+  
