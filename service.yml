@@ -3,12 +3,11 @@ kind: Service
 metadata:
   name: az-meta
   labels:
-    run: az-meta
+    app: az-meta
 spec:
   ports:
   - port: 80
     protocol: TCP
   selector:
-    run: az-meta
+    app: az-meta
   type: LoadBalancer
-  
