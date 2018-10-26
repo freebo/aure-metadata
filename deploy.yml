@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: az-meta
-        image: freebo/az-metadata:v0.1
+        image: freebo/az-metadata:latest
         ports:
         - containerPort: 80
