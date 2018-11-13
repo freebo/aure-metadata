@@ -1,4 +1,5 @@
 #!/bin/bash
+#Install the app via git
 
 apt-get update && apt-get install -y git apache2 php7.0 libapache2-mod-php7.0 stress
 
