@@ -6,7 +6,7 @@ ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 // Credit
 $author_name = 'Mike Freeman';
-$author_version = 'v0.93w';
+$author_version = 'v0.93W';
 $author_email = 'freeman.mj@gmail.com';
 $author_project = 'Azure Metadata PHP Page';
 
