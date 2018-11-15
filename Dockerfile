@@ -1,11 +1,8 @@
-FROM phpdockerio/php72-fpm
+FROM freebo/azure-metadata-base:latest
 
 MAINTAINER Mike Freeman <freeman.mj@gmail.com>
 
-# install git apache etc
-
 RUN apt-get update
-RUN apt-get install -y -f git apache2 libapache2-mod-php stress
 
 RUN rm -f /var/www/html/index.html
 
