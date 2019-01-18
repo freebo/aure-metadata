@@ -1,0 +1,31 @@
+Name:                   az-meta
+Namespace:              default
+CreationTimestamp:      Fri, 26 Oct 2018 22:16:35 +0000
+Labels:                 run=az-meta
+Annotations:            deployment.kubernetes.io/revision=1
+Selector:               run=az-meta
+Replicas:               1 desired | 1 updated | 1 total | 1 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  run=az-meta
+  Containers:
+   az-meta:
+    Image:        freebo/az-metadata:v0.1
+    Port:         80/TCP
+    Host Port:    0/TCP
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   az-meta-7c5f558fc6 (1/1 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  6m    deployment-controller  Scaled up replica set az-meta-7c5f558fc6 to 1

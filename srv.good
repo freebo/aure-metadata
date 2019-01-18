@@ -1,0 +1,19 @@
+Name:                     az-meta
+Namespace:                default
+Labels:                   run=az-meta
+Annotations:              <none>
+Selector:                 run=az-meta
+Type:                     LoadBalancer
+IP:                       10.0.4.139
+LoadBalancer Ingress:     13.75.209.230
+Port:                     <unset>  80/TCP
+TargetPort:               80/TCP
+NodePort:                 <unset>  32166/TCP
+Endpoints:                10.103.3.76:80
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:
+  Type    Reason                Age   From                Message
+  ----    ------                ----  ----                -------
+  Normal  EnsuringLoadBalancer  3m    service-controller  Ensuring load balancer
+  Normal  EnsuredLoadBalancer   3m    service-controller  Ensured load balancer
