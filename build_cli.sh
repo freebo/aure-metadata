@@ -1,7 +1,7 @@
 #Update names as required
 
-RG=vmssDemoRg
-NAME=vmssDemo
+export RG=vmssDemoRg
+export NAME=vmssDemo
 
 
 #Resource Group

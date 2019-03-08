@@ -1,0 +1,32 @@
+Name:                   az-meta
+Namespace:              default
+CreationTimestamp:      Fri, 26 Oct 2018 22:38:07 +0000
+Labels:                 app=az-meta
+Annotations:            deployment.kubernetes.io/revision=1
+                        kubectl.kubernetes.io/last-applied-configuration={"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"app":"az-meta"},"name":"az-meta","namespace":"default"},"spec":{"re...
+Selector:               app=az-meta
+Replicas:               3 desired | 3 updated | 3 total | 0 available | 3 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=az-meta
+  Containers:
+   az-meta:
+    Image:        freebo/az-metadata
+    Port:         80/TCP
+    Host Port:    0/TCP
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      False   MinimumReplicasUnavailable
+  Progressing    True    ReplicaSetUpdated
+OldReplicaSets:  <none>
+NewReplicaSet:   az-meta-66896c5748 (3/3 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  3m    deployment-controller  Scaled up replica set az-meta-66896c5748 to 3
