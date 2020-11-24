@@ -11,4 +11,4 @@ RUN cd /var/www/html && git clone https://github.com/freebo/azure-metadata.git .
 EXPOSE 80
 EXPOSE 443
 
-RUN ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
