@@ -1,4 +1,4 @@
-FROM freebo/azure-metadata-base:latest
+FROM php:7.2-apache
 
 MAINTAINER Mike Freeman <freeman.mj@gmail.com>
 
