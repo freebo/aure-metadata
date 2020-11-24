@@ -4,7 +4,7 @@ MAINTAINER Mike Freeman <freeman.mj@gmail.com>
 
 RUN apt-get update
 
-RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf`
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 RUN rm -f /var/www/html/index.html
 
