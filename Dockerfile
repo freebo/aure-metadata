@@ -1,6 +1,6 @@
 FROM php:7.2-apache
 
-MAINTAINER Mike Freeman <freeman.mj@gmail.com>
+MAINTAINER Mike Freeman <mike.freeman@microsoft.com>
 
 RUN apt-get update && apt-get install -y git stress
 
